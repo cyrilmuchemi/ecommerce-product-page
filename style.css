@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding-inline: 2rem;
+    padding-top: 1.2rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2.5rem;
+    cursor: pointer;
+    color: hsl(219, 9%, 45%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+}
+
+.nav-list:hover {
+    color: hsl(220, 13%, 13%);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#liner {
+    margin-top: 1.6rem;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    border: 2px solid yellowgreen;
+    margin-top: 6.8rem;
+    gap: 8rem;
+}
+
+.box1 {
+   display: flex;
+   flex-direction: column;
+}
+
+.box2 {
+    margin-top: 4rem;
+    background-color: green;
+}
+
+#big-shoe {
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#small-shoes {
+    display: flex;
+    margin-top: 2rem;
+    gap: 30px;
+}
+
+.tiny-box {
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+h1 {
+    color: hsl(26, 100%, 55%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+h2 {
+    color: hsl(220, 13%, 13%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Kumbh Sans', sans-serif;
+    color:  hsl(220, 14%, 75%);
+    font-weight: 400;
+}
