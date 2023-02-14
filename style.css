@@ -42,10 +42,10 @@ nav ul {
 
 .boxes {
     display: flex;
-    justify-content: center;
-    border: 2px solid yellowgreen;
     margin-top: 6.8rem;
-    gap: 8rem;
+    justify-content: center;
+    gap: 6rem;
+
 }
 
 .box1 {
@@ -55,7 +55,10 @@ nav ul {
 
 .box2 {
     margin-top: 4rem;
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
 }
 
 #big-shoe {
@@ -84,18 +87,79 @@ h1 {
     color: hsl(26, 100%, 55%);
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 14px;
 }
 
 h2 {
     color: hsl(220, 13%, 13%);
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
+    width: 50%;
     font-weight: 700;
 }
 
 p {
     font-family: 'Kumbh Sans', sans-serif;
-    color:  hsl(220, 14%, 75%);
-    font-weight: 400;
+    color:  hsl(219, 9%, 45%);
+    width: 50%;  
+}
+
+#price-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#price-current {
+    font-size: 22px;
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#percent-discount {
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    font-weight: 700;
+    padding-inline: 0.2rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    border-radius: 8px;
+}
+
+#last-price {
+    font-weight: 700;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#button-control {
+    display: flex;
+    gap: 1.2rem;
+}
+
+#product-add {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.4rem;
+    width: 100px;
+    height: auto;
+    align-items: center;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-radius: 4px;
+    background-color: hsl(223, 64%, 98%);
+}
+
+.button {
+    width: 180px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color:  hsl(223, 64%, 98%);
+    background-color: hsl(26, 100%, 55%);
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-radius: 4px;
+    font-weight: 700;
+    border: none;
 }
