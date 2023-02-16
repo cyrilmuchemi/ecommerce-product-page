@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
@@ -327,4 +328,21 @@ p {
 }
 .left{display: none;}
 .right{display: none;}
+}
+
+.cart-div {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.cart-counter {
+    background-color: hsl(26, 100%, 55%);
+    position: absolute;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    width: 25px;
+    margin-left: 10px;
 }
