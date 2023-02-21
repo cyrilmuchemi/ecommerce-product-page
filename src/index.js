@@ -16,8 +16,11 @@ let shopDetails = [
     }
 ]
 
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
 let generateShop = () => {
     return(shop.innerHTML = shopDetails.map((x) => {
+        let search = basket.find((x) => x.id === x.id) || [];
         return  `
         <div class="box1">
         <div id="big-shoe">
@@ -42,7 +45,13 @@ let generateShop = () => {
             <span id="last-price">$250.00</span>
         </div>
         <div id="button-control">
-            <div id="product-add"><img src="./src/assets/icon-minus.svg"/><span>0</span><img src="./src/assets/icon-plus.svg"/></div>
+            <div id="product-add">
+            <img onclick='decrement(${x.id})' src="./src/assets/icon-minus.svg"/>
+            <div class='quantity' id=${x.id}>
+            ${search.item === undefined ? 0 : search.item}
+            </div>
+            <img onclick='increment(${x.id})' src="./src/assets/icon-plus.svg"/>
+            </div>
             <div id="button-div"><button class="button"><img src="./src/assets/icon-cart.svg"/>Add to cart</button></div>
         </div>
     </div>
@@ -51,3 +60,49 @@ let generateShop = () => {
 };
 
 generateShop();
+
+let increment = (id)=> {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem)
+
+    if(search === undefined) {
+        basket.push({
+            id: selectedItem,
+            item: 1
+        })
+    }
+    else {
+        search.item += 1;
+    }
+    localStorage.setItem("data", JSON.stringify(basket))
+    update(selectedItem)
+
+};
+
+let decrement = (id)=> {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem)
+
+    if(search.item === 0) return ;
+    else {
+        search.item -= 1;
+    }
+
+    localStorage.setItem("data", JSON.stringify(basket))
+    update(selectedItem)
+    
+};
+
+let update = (id)=> {
+    let search = basket.find((x)=> x.id === id)
+    //console.log(search.item)
+    document.getElementById(id).innerHTML = search.item
+    calculation()
+};
+
+let calculation = () => { 
+    let cartIcon = document.getElementById('cart-counter');
+    cartIcon.innerHTML = basket.map((x)=> x.item).reduce((x,y) => x+y)
+}
+
+calculation();
