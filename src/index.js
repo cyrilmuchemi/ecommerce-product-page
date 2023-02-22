@@ -1,3 +1,20 @@
+const links = document.querySelectorAll('.nav-list');
+
+links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        if(!e.target) {
+           return link.innerHTML
+        }
+        else {
+            return link.innerHTML += `
+            <div class="active"></div>
+           `
+        }   
+    })
+
+});
+
+
 let shop = document.getElementById('shop');
 
 let shopDetails = [
@@ -83,6 +100,8 @@ let decrement = (id)=> {
     let selectedItem = id;
     let search = basket.find((x) => x.id === selectedItem)
 
+    if(search === undefined) return;
+
     if(search.item === 0) return ;
     else {
         search.item -= 1;
@@ -102,7 +121,7 @@ let update = (id)=> {
 
 let calculation = () => { 
     let cartIcon = document.getElementById('cart-counter');
-    cartIcon.innerHTML = basket.map((x)=> x.item).reduce((x,y) => x+y)
+    cartIcon.innerHTML = basket.map((x)=> x.item).reduce((x,y) => x+y, 0)
 }
 
 calculation();

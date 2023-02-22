@@ -165,7 +165,6 @@
 @media only screen and (min-width: 768px) {
 
 nav {
-    position: sticky;
     display: flex;
     justify-content: space-between;
     color: black;
@@ -183,12 +182,17 @@ nav ul {
     display: flex;
     gap: 2.5rem;
     cursor: pointer;
-    color: hsl(219, 9%, 45%);
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
 }
 
-.nav-list:hover {
+.nav-list a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+
+}
+
+.nav-list a:hover {
     color: hsl(220, 13%, 13%);
 }
 
@@ -334,6 +338,7 @@ p {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    cursor: pointer;
     position: relative;
 }
 
@@ -345,4 +350,23 @@ p {
     color: white;
     width: 25px;
     margin-left: 10px;
+}
+
+#avatar {
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+#avatar:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.active {
+    width: 40px;
+    height: 2px;
+    background-color:  hsl(26, 100%, 55%);
+    margin-top: 2.3rem;
+    margin-left: 15px;
+    transition-delay: 5s;
 }
