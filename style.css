@@ -320,19 +320,22 @@ p {
 
 .button {
     width: 180px;
+    height: 40px;
     font-family: 'Kumbh Sans', sans-serif;
     color:  hsl(223, 64%, 98%);
     background-color: hsl(26, 100%, 55%);
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
+    text-align: center;
     border-radius: 4px;
     font-weight: 400;
+    cursor: pointer;
     border: none;
     text-align: center;
 }
 .left{display: none;}
 .right{display: none;}
-}
+
 
 .cart-div {
     display: flex;
@@ -369,4 +372,69 @@ p {
     margin-top: 2.3rem;
     margin-left: 15px;
     transition-delay: 5s;
+}
+
+.checkout-page {
+    width: 400px;
+    position: absolute;
+    padding-inline: 1rem;
+    margin-top: -25px;
+    right: 65px;
+    box-shadow: 5px 10px hsl(220, 14%, 75%);
+    height: 230px;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-page p {
+    color: hsl(220, 13%, 13%);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.cart-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-text {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.cart-text p {
+    color: hsl(219, 9%, 45%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.cart-icon {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cart-spans {
+    display: flex;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.empty-header {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 20px;
+}
+
 }

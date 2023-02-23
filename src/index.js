@@ -125,3 +125,35 @@ let calculation = () => {
 }
 
 calculation();
+
+let shoppingCart = document.getElementById("checkoutPage");
+
+let generateCartItems = () => {
+    if(basket.length !== 0){
+        shoppingCart.innerHTML += `
+        <p>Cart</p>
+            <hr/>
+            <div class="cart-control">
+                <img class="cart-icon" src="./src/assets/image-product-1-thumbnail.jpg" alt="shoe thumbnail"/>
+                <div class="cart-text">
+                    <p>Fall Limited Edition Sneakers</p>
+                    <div class="cart-spans">
+                        <span>$125</span> × 0 <span> $0 </span>
+                    </div>
+                </div>
+                <img src="./src/assets/icon-delete.svg"/>
+            </div>
+            <div class="cart-btn">
+            <button class="button">Checkout</button>
+            </div>
+        `
+    }else {
+        shoppingCart.innerHTML += `
+        <p>Cart</p>
+        <hr/>
+        <h2 class="empty-header">Your cart is empty</h2>
+        `
+    }
+}
+
+generateCartItems();
